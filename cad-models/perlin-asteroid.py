@@ -29,8 +29,9 @@ for i in range(num_samples):
 # Convert set of points to a mesh
 cloud = pv.PolyData(points)
 surf = cloud.reconstruct_surface()
-# surf = surf.compute_normals(flip_normals=True)
-print(surf.cell_normals)
+# Quick fix to flip normals when they face the interior of the shape
+if (np.sum(surf.point_normals[0]) > 0):
+    surf = surf.compute_normals(flip_normals=True)
 surf.plot()
 surf.plot_normals()
 
