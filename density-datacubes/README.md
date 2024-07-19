@@ -17,8 +17,8 @@ The simulation file is an N-body simulation containing ~8.6 billion particles (2
 
 Run the provided Python script, which will open the simulation file and plot an example snapshot of the data. Once you've done that, consider making some adjustments before binning the points and saving the datacube for viewing in the VizLab: 
 
-* Use the mass of the subhalos ('mvir' keyword) to get a subset of the simulation - those that are low mass, high mass, or something in between. Where are those mass halos located?
-* Use the radius of the subhalos ('rvir' keyword) to get a subset of the simulation.
+* Use the mass of the subhalos ('mvir' keyword) to get a subset of the simulation - those that are low mass, high mass, or something in between. Where are those halos located?
+* Use the radius of the subhalos ('rvir' keyword) to get a subset of the simulation. Like before, are there any trends you see?
 * (space willing) Adjust the dimensions of the binning process to change how much detail is preserved in the datacube. How much information is saved in a 128^3 cube? How about 64^3?
 
 ### Author's note
