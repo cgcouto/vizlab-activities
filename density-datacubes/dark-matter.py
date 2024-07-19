@@ -3,6 +3,7 @@ import pickle
 import matplotlib.pyplot as plt
 import h5py
 
+#Adjust filepath as necessary!
 path_to_file = "halos_short.bin"
 
 with open(path_to_file, "rb") as f:
@@ -28,3 +29,19 @@ plt.scatter(halos['x'],halos['y'],c='gray',s=0.5,alpha=0.3)
 
 plt.axis('off')
 plt.show()
+
+arr = np.vstack((halos['x'], halos['y'], halos['z']))
+
+#Uncomment below when you're ready to start saving to disk!
+
+# your_name = 'chris'
+# dims = [256, 256, 256]
+
+# # Do the particle binning!
+# H, edges = np.histogramdd(np.transpose(arr), bins = np.array(dims))
+
+# # Save the resulting dataset
+# g = h5py.File(your_name+"_darkmatter.h5", 'w')
+# dset = g.create_dataset("densities", data=H)
+# g.close()
+
